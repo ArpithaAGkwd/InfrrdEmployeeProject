@@ -1,0 +1,13 @@
+.main-header {
+    background-color: white;
+    height: 5rem;
+}
+
+.container-menu {
+    display: flex;
+    justify-content: end;
+    margin-right: 16px;
+    height: 100%;
+    align-items: baseline;
+    gap: 20px;
+}

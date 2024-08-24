@@ -1,0 +1,30 @@
+<section class="side-menus">
+    <div style="width:100%">
+        <div style="height:5rem">
+            <img>
+        </div>
+        <div class="side-menu-item"><a routerLink="/" routerLinkActive="active"
+                [routerLinkActiveOptions]="{ exact: true }"><i class="bi bi-hdd-stack-fill"></i><span
+                    class="side-menu-title">Overview</span></a></div>
+        <div class="side-menu-item"><a><i class="bi bi-envelope"></i><span class="side-menu-title">Messages</span></a>
+        </div>
+        <div class="side-menu-item"><a routerLink="/search-employee" routerLinkActive="active"
+                [routerLinkActiveOptions]="{ exact: true }"><i class="bi bi-search"></i><span
+                    class="side-menu-title">Search</span></a></div>
+        <div class="side-menu-item"><a routerLink="/manage-employee" routerLinkActive="active"
+                [routerLinkActiveOptions]="{ exact: true }"><i class="bi bi-gear"></i><span
+                    class="side-menu-title">Manage</span></a></div>
+        <div class="side-menu-item"><a><i class="bi bi-clock-history"></i><span
+                    class="side-menu-title">History</span></a></div>
+        <div class="side-menu-item"><a routerLink="/my-account" routerLinkActive="active"
+                [routerLinkActiveOptions]="{ exact: true }"><i class="bi bi-person-fill"></i><span
+                    class="side-menu-title">My Account</span></a></div>
+    </div>
+
+    <div style="width:100%">
+        <div class="side-menu-item"><a><i class="bi bi-chat-quote-fill"></i><span class="side-menu-title">Get
+                    Help</span></a></div>
+        <div class="side-menu-item"><a><i class="bi bi-box-arrow-right"></i><span class="side-menu-title">Sign
+                    Out</span></a></div>
+    </div>
+</section>

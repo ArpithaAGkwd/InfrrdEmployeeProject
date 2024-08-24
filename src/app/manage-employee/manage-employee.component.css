@@ -1,0 +1,15 @@
+.manage-section {
+    display: flex;
+    flex-direction: row;
+    height: 88.4vh;
+}
+
+.form-section {
+    width: 30%;
+    background-color: beige;
+}
+
+.render-section {
+    width: 70%;
+    background-color: rgb(105, 147, 88);
+}

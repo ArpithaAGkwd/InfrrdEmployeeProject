@@ -1,0 +1,33 @@
+.side-menus {
+    background-color: white;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.side-menu-item a {
+    padding-left: 1.5rem !important;
+    padding-top: 1rem !important;
+    width: 100%;
+    font-size: 29px;
+    display: inline-block;
+    padding: 5px;
+    color: green;
+    height: 3rem;
+    text-decoration: none;
+}
+
+.side-menu-title {
+    margin-left: 1rem;
+    font-weight: bolder;
+}
+
+.side-menu-item .active {
+    color: green;
+    /* Example background color */
+    background-color: rgb(89, 150, 83);
+    /* Example text color */
+}
