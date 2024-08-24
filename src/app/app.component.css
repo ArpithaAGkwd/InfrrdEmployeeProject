@@ -1,16 +1,17 @@
-.main{
-    display:flex;
+.main {
+    display: flex;
     flex-direction: row;
 }
 
 .sidenav-main {
     width: 20%;
-    height:100vh;
+    height: 100vh;
     background-color: beige;
+    border-right: 3px solid #f2f2f2f2;
 }
 
 .main-content {
     width: 80%;
-    height:100vh;
-    background-color: rgb(221, 221, 162);
+    height: 100vh;
+    background-color: #ebf9ec;
 }

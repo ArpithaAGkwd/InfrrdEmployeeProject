@@ -1,3 +1,41 @@
 <section class="my-account-section">
-    ##my-account-section##
+    <div class="card">
+        <div class="card-title" style="padding:0 1rem 0 1rem">
+            <div class="pro-img">
+                img
+            </div>
+            <div>
+                <p>Arpitha A Gaekwad</p>
+                <p>Senior Frontend Developer</p>
+            </div>
+            <div>
+                <i class="bi bi-telegram" style="font-size: 2.5rem;"></i>
+            </div>
+        </div>
+        <div class="card-body">
+            <div class="item-align-flex-rating" style="padding:1rem">
+                <p>4.5 Rating</p>
+                <div class="star-container">
+                    <ng-container *ngFor="let star of starRatings">
+                        <i *ngIf="star === 1" class="bi bi-star-fill"></i>
+                        <i *ngIf="star === 0.5" class="bi bi-star-half"></i>
+                    </ng-container>
+                </div>
+            </div>
+            <div class="item-align-flex-container border-profile-card details-css">
+                <div>Experience : 5.8 years</div>
+                <div>Date Of Joining : 2018</div>
+            </div>
+            <div class="border-profile-card details-css">
+                <div>Current Team : myISP, Bangalore</div>
+            </div>
+            <div class="border-profile-card details-css">
+                <div>Reporting Manager : Sona.Job</div>
+            </div>
+            <div class="item-align-flex-container details-css border-profile-card">
+                <div><i class="bi bi-telephone-fill"></i> 9448179713</div>
+                <div><i class="bi bi-envelope-fill"></i> arpithagkwdgmail.com</div>
+            </div>            
+        </div>
+    </div>
 </section>

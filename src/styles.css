@@ -9,3 +9,55 @@ form {
     flex-direction: column;
     align-items: center;
 }
+
+.form-floating {
+    width: 99% !important;
+    position: relative;
+    margin-bottom: 1rem;
+}
+
+.form-floating input {
+    width: 100%;
+    padding: 0.75rem 0.75rem 0.75rem 0.75rem;
+    font-size: 1rem;
+    line-height: 1.25;
+    border: 1px solid #ced4da;
+    border-radius: 0.25rem;
+    height: 4rem;
+    box-sizing: border-box;
+}
+
+.form-floating label {
+    position: absolute;
+    top: 50%;
+    left: 0.75rem;
+    padding: 0 0.25rem;
+    background-color: #f8f9fa;
+    color: #6c757d;
+    pointer-events: none;
+    transform: translateY(-50%);
+    transition: all 0.1s ease-in-out;
+    font-size: 1rem;
+}
+
+.form-floating input:focus,
+.form-floating input:not(:placeholder-shown) {
+    padding-top: 1.5rem;
+    padding-bottom: 0.5rem;
+}
+
+.form-floating input:focus+label,
+.form-floating input:not(:placeholder-shown)+label {
+    top: 0;
+    left: 0.75rem;
+    font-size: 0.85rem;
+    color: #495057;
+    transform: translateY(-50%);
+}
+
+.form-floating input:focus {
+    outline: none;
+    border-color: #80bdff;
+    box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
+    background-color: #fff;
+}
