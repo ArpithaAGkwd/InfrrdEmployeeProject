@@ -11,8 +11,49 @@
             </div>
         </form>
     </section>
-    
+
     <section class="render-section">
-        ##render##
+        <div class="card" *ngFor="let employee of employees">
+            <div class="card-title" style="padding:0 1rem 0 1rem">
+                <div class="pro-details">
+                    <div class="pro-img">
+                        <i class="bi bi-person-circle" style="font-size: 2.5rem;"></i>
+                    </div>
+                    <div>
+                        <p>{{ employee.name }}</p>
+                        <p>{{ employee.role }}</p>
+                    </div>
+                </div>
+                <div>
+                    <i class="bi bi-telegram icon-green" style="font-size: 2.5rem;"></i>
+                </div>
+            </div>
+            <div class="card-body">
+                <div class="item-align-flex-rating" style="padding:1rem">
+                    <p>{{ employee.rating }} Rating</p>
+                    <div class="star-container">
+                        <ng-container *ngFor="let star of employee.starRatings">
+                            <i *ngIf="star === 1" class="bi bi-star-fill"></i>
+                            <i *ngIf="star === 0.5" class="bi bi-star-half"></i>
+                        </ng-container>
+                    </div>
+                </div>
+                <div class="item-align-flex-container border-profile-card details-css">
+                    <div>Experience: {{ employee.experience }}</div>
+                    <div>Date Of Joining: {{ employee.dateOfJoining }}</div>
+                </div>
+                <div class="border-profile-card details-css">
+                    <div>Current Team: {{ employee.currentTeam }}</div>
+                </div>
+                <div class="border-profile-card details-css">
+                    <div>Reporting Manager: {{ employee.reportingManager }}</div>
+                </div>
+                <div class="item-align-flex-container details-css border-profile-card">
+                    <div><i class="bi bi-telephone-fill icon-blue"></i>{{ employee.phone }}</div>
+                    <div><i class="bi bi-envelope-fill icon-red"></i> {{ employee.email }}</div>
+                </div>
+            </div>
+        </div>
     </section>
+
 </section>

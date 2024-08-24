@@ -5,11 +5,16 @@
 }
 
 .form-section {
-    width: 30%;
+    width: 20%;
     background-color: white;
 }
 
 .render-section {
-    width: 70%;
+    width: 80%;
+    padding:1rem;
     background-color: #ebf9ec;
+    display: flex;
+    gap: 12px;
+    flex-wrap: wrap;
+    flex-grow: 1.5;
 }

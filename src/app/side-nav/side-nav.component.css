@@ -27,7 +27,5 @@
 
 .side-menu-item .active {
     color: green;
-    /* Example background color */
     background-color: #e8f9e9;
-    /* Example text color */
 }

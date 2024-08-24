@@ -9,13 +9,18 @@
 }
 
 .form-section {
-    width: 30%;
+    width: 20%;
     background-color: white;
 }
 
 .render-section {
-    width: 70%;
-    background-color: rgb(105, 147, 88);
+    width: 80%;
+    padding:1rem;
+    background-color: #ebf9ec;
+    display: flex;
+    gap: 12px;
+    flex-wrap: wrap;
+    flex-grow: 1.5;
 }
 
 .label-css {
@@ -62,7 +67,7 @@
     display: none;
     position: absolute;
     background-color: white;
-    min-width: 400px;
+    min-width: 266px;
     box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
     z-index: 1;
     border-radius: 5px;
