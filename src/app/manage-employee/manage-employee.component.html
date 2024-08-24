@@ -5,16 +5,56 @@
                 <input type="email" id="floatingInput" placeholder=" " required>
                 <label for="floatingInput">Name</label>
             </div>
+
+            <div class="form-floating">
+                <input type="email" id="floatingInput" placeholder=" " required>
+                <label for="floatingInput">Designation</label>
+            </div>
+
+            <div class="form-floating">
+                <input type="email" id="floatingInput" placeholder=" " required>
+                <label for="floatingInput">Rating</label>
+            </div>
+
+            <div class="form-floating">
+                <input type="email" id="floatingInput" placeholder=" " required>
+                <label for="floatingInput">Experience</label>
+            </div>
+
+            <div class="form-floating">
+                <input type="email" id="floatingInput" placeholder=" " required>
+                <label for="floatingInput">Date Of Joining</label>
+            </div>
+
+            <div class="form-floating">
+                <input type="email" id="floatingInput" placeholder=" " required>
+                <label for="floatingInput">Current Team</label>
+            </div>
+
+            <div class="form-floating">
+                <input type="email" id="floatingInput" placeholder=" " required>
+                <label for="floatingInput">Reporting Manager</label>
+            </div>
+
+            <div class="form-floating">
+                <input type="email" id="floatingInput" placeholder=" " required>
+                <label for="floatingInput">Phone</label>
+            </div>
+
             <div class="form-floating">
                 <input type="email" id="floatingInput" placeholder=" " required>
                 <label for="floatingInput">Email address</label>
             </div>
+
+            <!-- <div class="form-button" style="width:100%">                
+                <button class="add-employee-btn">Add Employee Record</button>
+            </div> -->
         </form>
     </section>
 
-    <section class="render-section">
+    <section class="render-section" style="overflow-y: auto;scrollbar-width: none;">
         <div class="card" *ngFor="let employee of employees">
-            <div class="card-title" style="padding:0 1rem 0 1rem">
+            <div class="card-title" style="padding:0 1rem 0 1rem;margin-top:5px">
                 <div class="pro-details">
                     <div class="pro-img">
                         <i class="bi bi-person-circle" style="font-size: 2.5rem;"></i>
@@ -49,8 +89,8 @@
                     <div>Reporting Manager: {{ employee.reportingManager }}</div>
                 </div>
                 <div class="item-align-flex-container details-css border-profile-card">
-                    <div><i class="bi bi-telephone-fill icon-blue"></i>{{ employee.phone }}</div>
-                    <div><i class="bi bi-envelope-fill icon-red"></i> {{ employee.email }}</div>
+                    <div><i class="bi bi-telephone-fill icon-blue"></i>&nbsp;{{ employee.phone }}</div>
+                    <div><i class="bi bi-envelope-fill icon-red"></i>&nbsp;{{ employee.email }}</div>
                 </div>
             </div>
         </div>

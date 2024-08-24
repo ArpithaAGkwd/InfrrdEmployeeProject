@@ -58,4 +58,24 @@ export class SearchEmployeeComponent {
     }
   ];
 
+  selectedDepartment: string = ''; // Holds the selected department
+  selectedRoleType: string = '';
+  dropdownOpen: boolean = false;   // Tracks whether the dropdown is open
+
+  ngOnInit(){}
+
+  toggleDropdown() {
+    this.dropdownOpen = !this.dropdownOpen;
+  }
+
+  selectDepartment(department: string) {
+    this.selectedDepartment = department;  
+    this.dropdownOpen = false;            
+  }
+
+  selectedRole(roleType: string) {
+    this.selectedRoleType = roleType;  
+    this.dropdownOpen = false;           
+  }
+
 }

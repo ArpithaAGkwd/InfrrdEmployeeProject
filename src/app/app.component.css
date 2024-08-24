@@ -4,14 +4,14 @@
 }
 
 .sidenav-main {
-    width: 20%;
+    width: 15%;
     height: 100vh;
     background-color: beige;
     border-right: 3px solid #f2f2f2f2;
 }
 
 .main-content {
-    width: 80%;
-    height: 100vh;
+    width: 85%;
+    height: 100vh;    
     background-color: #ebf9ec;
 }
