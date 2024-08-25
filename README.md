@@ -12,4 +12,5 @@ Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The appli
 This is an employee management application, as of now the side nav items have Overview (functional), Messages (unfunctional), Search (functional), Manage (Functional),History (unfunctional), My Account (Functional).
 
 on clicking on Search you can serach from side nav - it will redirect to serach component where you can search for employee based on the name or email
+
 on clicking on Manage you can see all employee records, edit employee records, delete employee records, add employee records
