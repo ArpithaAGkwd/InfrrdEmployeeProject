@@ -15,7 +15,7 @@
 .dropdown-container {
     position: relative;
     display: inline-block;
-    margin-top: 20px;
+    margin-top: 2px;
 }
 
 .dropdown-label {
@@ -55,7 +55,7 @@
     overflow: hidden;
 }
 
-.dropdown-content a {
+.dropdown-content div {
     color: black;
     padding: 12px 16px;
     text-decoration: none;
@@ -63,10 +63,15 @@
     transition: background-color 0.3s;
 }
 
-.dropdown-content a:hover {
+.dropdown-content div:hover {
     background-color: #f1f1f1;
 }
 
 .dropdown-container:hover .dropdown-content {
     display: block;
+}
+
+.icon-notification {
+    color: orangered;
+    font-size: 1rem;
 }

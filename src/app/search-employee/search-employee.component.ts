@@ -59,7 +59,6 @@ export class SearchEmployeeComponent {
   ];
 
   employees = this.originalEmployees;
-
   selectedDepartment: string = '';
   selectedRoleType: string = '';
   dropdownOpen: boolean = false;
@@ -74,16 +73,19 @@ export class SearchEmployeeComponent {
     this.dropdownOpen = !this.dropdownOpen;
   }
 
+  // bind dropdown values on selection for department field
   selectDepartment(department: string) {
     this.selectedDepartment = department;
     this.dropdownOpen = false;
   }
 
+  // bind dropdown values on selection for Role field
   selectedRole(roleType: string) {
     this.selectedRoleType = roleType;
     this.dropdownOpen = false;
   }
 
+  // method for search employee
   searchEmployees(): void {
     console.log('Search initiated with:', this.searchName, this.searchEmail);
     this.filteredEmployees = this.employees.filter(employee =>
@@ -95,6 +97,7 @@ export class SearchEmployeeComponent {
     this.employees = this.filteredEmployees;
   }
 
+  // method to clear search operation
   clearSearch(){
     this.searchName = '';
     this.searchEmail = '';

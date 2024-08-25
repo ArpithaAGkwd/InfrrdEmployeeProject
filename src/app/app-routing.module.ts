@@ -12,8 +12,6 @@ const routes: Routes = [
   { path: "my-account", component: MyAccountComponent },
 ];
 
-
-
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
   exports: [RouterModule]

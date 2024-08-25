@@ -1,89 +1,58 @@
 <section class="manage-section">
     <section class="form-section">
         <form style="width:100%" id="search-form" (ngSubmit)="searchEmployees()">
-            <div class="form-field">
-                <div class="dropdown-container-search">
-                    <label class="dropdown-label">Name</label>
-                    <input class="dropdown-button input-css" placeholder="Enter Name" [(ngModel)]="searchName" name="searchName">
-                </div>
-
-                <div class="dropdown-container-search">
-                    <label class="dropdown-label">Email Address</label>
-                    <input class="dropdown-button input-css" placeholder="Enter Email Id" [(ngModel)]="searchEmail" name="searchEmail">
-                </div>
-
-                <div class="dropdown-container-search">
-                    <label class="dropdown-label">Department</label>
-                    <button class="dropdown-button btn-search" id="teamDropdown" (click)="toggleDropdown()">
-                        {{ selectedDepartment || 'Select Department' }} <i class="bi bi-chevron-down"></i>
-                    </button>
-                    <div class="dropdown-content" [class.show]="dropdownOpen">
-                        <div (click)="selectDepartment('Product Team')">Product Team</div>
-                        <div (click)="selectDepartment('IDC')">IDC</div>
-                        <div (click)="selectDepartment('OCBC')">OCBC</div>
-                        <div (click)="selectDepartment('Radian')">Radian</div>
-                        <div (click)="selectDepartment('Rustify')">Rustify</div>
+            
+                <div class="form-field">
+                    <div class="dropdown-container-search">
+                        <label class="dropdown-label">Name</label>
+                        <input class="dropdown-button input-css" placeholder="Enter Name" [(ngModel)]="searchName"
+                            name="searchName">
                     </div>
-                </div>
 
-                <div class="dropdown-container-search">
-                    <label class="dropdown-label">Role Type</label>
-                    <button class="dropdown-button btn-search" id="teamDropdown" (click)="toggleDropdown()">
-                        {{ selectedRoleType || 'Select Role Type' }} <i class="bi bi-chevron-down"></i>
-                    </button>
-                    <div class="dropdown-content" [class.show]="dropdownOpen">
-                        <div (click)="selectedRole('Full Time')">Full Time</div>
-                        <div (click)="selectedRole('Part Time')">Part Time</div>
-                        <div (click)="selectedRole('Contract')">Contract</div>
+                    <div class="dropdown-container-search">
+                        <label class="dropdown-label">Email Address</label>
+                        <input class="dropdown-button input-css" placeholder="Enter Email Id" [(ngModel)]="searchEmail"
+                            name="searchEmail">
                     </div>
+
+                    <div class="dropdown-container-search">
+                        <label class="dropdown-label">Department</label>
+                        <button class="dropdown-button btn-search" id="teamDropdown" (click)="toggleDropdown()">
+                            {{ selectedDepartment || 'Select Department' }} <i class="bi bi-chevron-down"></i>
+                        </button>
+                        <div class="dropdown-content" [class.show]="dropdownOpen">
+                            <div (click)="selectDepartment('Product Team')">Product Team</div>
+                            <div (click)="selectDepartment('IDC')">IDC</div>
+                            <div (click)="selectDepartment('OCBC')">OCBC</div>
+                            <div (click)="selectDepartment('Radian')">Radian</div>
+                            <div (click)="selectDepartment('Rustify')">Rustify</div>
+                        </div>
+                    </div>
+
+                    <div class="dropdown-container-search" style="border-bottom:2px solid #f2f2f2f2">
+                        <label class="dropdown-label">Role Type</label>
+                        <button class="dropdown-button btn-search" id="teamDropdown" (click)="toggleDropdown()">
+                            {{ selectedRoleType || 'Select Role Type' }} <i class="bi bi-chevron-down"></i>
+                        </button>
+                        <div class="dropdown-content" [class.show]="dropdownOpen">
+                            <div (click)="selectedRole('Full Time')">Full Time</div>
+                            <div (click)="selectedRole('Part Time')">Part Time</div>
+                            <div (click)="selectedRole('Contract')">Contract</div>
+                        </div>
+                    </div>
+
                 </div>
 
-                <div class="dropdown-container-search">
-                    <label class="dropdown-label">Designation</label>
-                    <button class="dropdown-button btn-search" id="teamDropdown">
-                        Select Designation<i class="bi bi-chevron-down"></i>
-                    </button>
-                </div>
-
-                <div class="dropdown-container-search">
-                    <label class="dropdown-label">Experience</label>
-                    <button class="dropdown-button btn-search" id="teamDropdown">
-                        Select Experience<i class="bi bi-chevron-down"></i>
-                    </button>
-                </div>
-
-                <div class="dropdown-container-search">
-                    <label class="dropdown-label">Year Of Joining</label>
-                    <button class="dropdown-button btn-search" id="teamDropdown">
-                        Select Year Of Joining<i class="bi bi-chevron-down"></i>
-                    </button>
-                </div>
-
-                <div class="dropdown-container-search">
-                    <label class="dropdown-label">Location</label>
-                    <button class="dropdown-button btn-search" id="teamDropdown">
-                        Select Location<i class="bi bi-chevron-down"></i>
-                    </button>
-                </div>
-
-                <div class="dropdown-container-search">
-                    <label class="dropdown-label">Team</label>
-                    <button class="dropdown-button btn-search" id="teamDropdown">
-                        Select Team<i class="bi bi-chevron-down"></i>
-                    </button>
-                </div>
-            </div>
-
-            <div style="margin-top:5px;">
-                <button type="button" (click)="clearSearch()">Clear</button>
-                <button type="submit">Search</button>
-            </div>
+                <div style="margin-bottom:10px;" id="search-btn-container">
+                    <button type="button" class="clear-btn" (click)="clearSearch()">Clear</button>
+                    <button type="submit" class="search-btn">Search</button>
+                </div>          
         </form>
 
     </section>
 
     <section class="render-section" style="overflow-y: auto;scrollbar-width: none;">
-        <div class="card" *ngFor="let employee of employees">
+        <div class="card" *ngFor="let employee of employees" style="height: 315px;">
             <div class="card-title" style="padding:0 1rem 0 1rem;margin-top:5px">
                 <div class="pro-details">
                     <div class="pro-img">

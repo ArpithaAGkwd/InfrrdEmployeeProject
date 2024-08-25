@@ -28,7 +28,7 @@ form {
 }
 
 .form-floating {
-    width: 99% !important;
+    width: 92% !important;
     position: relative;
     margin-bottom: 0.6rem;
 }
@@ -40,7 +40,7 @@ form {
     line-height: 1.25;
     border: 1px solid #ced4da;
     border-radius: 0.25rem;
-    height: 2rem;
+    height: 2.5rem;
     box-sizing: border-box;
 }
 
