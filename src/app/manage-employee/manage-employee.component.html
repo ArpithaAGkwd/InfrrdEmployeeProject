@@ -1,55 +1,56 @@
 <section class="manage-section">
     <section class="form-section">
-        <form>
+        <form #employeeForm="ngForm" (ngSubmit)="onSubmit(employeeForm)">
             <div class="form-floating">
-                <input type="email" id="floatingInput" placeholder=" " required>
-                <label for="floatingInput">Name</label>
+                <input type="text" id="floatingInputName" placeholder="" required [(ngModel)]="newEmployee.name" name="name">
+                <label for="floatingInputName">Name</label>
             </div>
-
+        
             <div class="form-floating">
-                <input type="email" id="floatingInput" placeholder=" " required>
-                <label for="floatingInput">Designation</label>
+                <input type="text" id="floatingInputRole" placeholder="" required [(ngModel)]="newEmployee.role" name="role">
+                <label for="floatingInputRole">Designation</label>
             </div>
-
+        
             <div class="form-floating">
-                <input type="email" id="floatingInput" placeholder=" " required>
-                <label for="floatingInput">Rating</label>
+                <input type="number" id="floatingInputRating" placeholder="" required [(ngModel)]="newEmployee.rating" name="rating">
+                <label for="floatingInputRating">Rating</label>
             </div>
-
+        
             <div class="form-floating">
-                <input type="email" id="floatingInput" placeholder=" " required>
-                <label for="floatingInput">Experience</label>
+                <input type="text" id="floatingInputExperience" placeholder="" required [(ngModel)]="newEmployee.experience" name="experience">
+                <label for="floatingInputExperience">Experience</label>
             </div>
-
+        
             <div class="form-floating">
-                <input type="email" id="floatingInput" placeholder=" " required>
-                <label for="floatingInput">Date Of Joining</label>
+                <input type="text" id="floatingInputDOJ" placeholder="" required [(ngModel)]="newEmployee.dateOfJoining" name="dateOfJoining">
+                <label for="floatingInputDOJ">Date Of Joining</label>
             </div>
-
+        
             <div class="form-floating">
-                <input type="email" id="floatingInput" placeholder=" " required>
-                <label for="floatingInput">Current Team</label>
+                <input type="text" id="floatingInputTeam" placeholder="" required [(ngModel)]="newEmployee.currentTeam" name="currentTeam">
+                <label for="floatingInputTeam">Current Team</label>
             </div>
-
+        
             <div class="form-floating">
-                <input type="email" id="floatingInput" placeholder=" " required>
-                <label for="floatingInput">Reporting Manager</label>
+                <input type="text" id="floatingInputManager" placeholder="" required [(ngModel)]="newEmployee.reportingManager" name="reportingManager">
+                <label for="floatingInputManager">Reporting Manager</label>
             </div>
-
+        
             <div class="form-floating">
-                <input type="email" id="floatingInput" placeholder=" " required>
-                <label for="floatingInput">Phone</label>
+                <input type="text" id="floatingInputPhone" placeholder="" required [(ngModel)]="newEmployee.phone" name="phone">
+                <label for="floatingInputPhone">Phone</label>
             </div>
-
+        
             <div class="form-floating">
-                <input type="email" id="floatingInput" placeholder=" " required>
-                <label for="floatingInput">Email address</label>
+                <input type="email" id="floatingInputEmail" placeholder="" required [(ngModel)]="newEmployee.email" name="email">
+                <label for="floatingInputEmail">Email address</label>
             </div>
-
-            <!-- <div class="form-button" style="width:100%">                
-                <button class="add-employee-btn">Add Employee Record</button>
-            </div> -->
+        
+            <div>
+                <button type="submit">{{ isEditing ? 'Update Employee Record' : 'Add Employee Record' }}</button>
+            </div>
         </form>
+        
     </section>
 
     <section class="render-section" style="overflow-y: auto;scrollbar-width: none;">
@@ -92,8 +93,14 @@
                     <div><i class="bi bi-telephone-fill icon-blue"></i>&nbsp;{{ employee.phone }}</div>
                     <div><i class="bi bi-envelope-fill icon-red"></i>&nbsp;{{ employee.email }}</div>
                 </div>
+    
+                <div class="actions-control">
+                    <i class="bi bi-trash3 icon-orangered" (click)="deleteEmployee(employee)"></i>
+                    <i class="bi bi-pencil-square icon-edit" (click)="editEmployee(employee)"></i>
+                </div>
             </div>
         </div>
-    </section>
+    </section>    
+    
 
 </section>

@@ -7,7 +7,7 @@ import { Component } from '@angular/core';
 })
 export class SearchEmployeeComponent {
 
-  employees = [
+  originalEmployees = [
     {
       name: 'Arpitha A Gaekwad',
       role: 'Senior Frontend Developer',
@@ -58,24 +58,48 @@ export class SearchEmployeeComponent {
     }
   ];
 
-  selectedDepartment: string = ''; // Holds the selected department
-  selectedRoleType: string = '';
-  dropdownOpen: boolean = false;   // Tracks whether the dropdown is open
+  employees = this.originalEmployees;
 
-  ngOnInit(){}
+  selectedDepartment: string = '';
+  selectedRoleType: string = '';
+  dropdownOpen: boolean = false;
+  searchName = '';
+  searchEmail = '';
+  filteredEmployees = [...this.employees];
+
+
+  ngOnInit() { }
 
   toggleDropdown() {
     this.dropdownOpen = !this.dropdownOpen;
   }
 
   selectDepartment(department: string) {
-    this.selectedDepartment = department;  
-    this.dropdownOpen = false;            
+    this.selectedDepartment = department;
+    this.dropdownOpen = false;
   }
 
   selectedRole(roleType: string) {
-    this.selectedRoleType = roleType;  
-    this.dropdownOpen = false;           
+    this.selectedRoleType = roleType;
+    this.dropdownOpen = false;
   }
+
+  searchEmployees(): void {
+    console.log('Search initiated with:', this.searchName, this.searchEmail);
+    this.filteredEmployees = this.employees.filter(employee =>
+      (this.searchName && !this.searchEmail && employee.name.toLowerCase().includes(this.searchName.toLowerCase())) ||
+      (this.searchEmail && !this.searchName && employee.email.toLowerCase().includes(this.searchEmail.toLowerCase())) ||
+      (!this.searchName && !this.searchEmail) // Show all if no search criteria is entered
+    );
+    console.log('Filtered Employees:', this.filteredEmployees);
+    this.employees = this.filteredEmployees;
+  }
+
+  clearSearch(){
+    this.searchName = '';
+    this.searchEmail = '';
+    this.employees = [...this.originalEmployees];
+  }
+
 
 }

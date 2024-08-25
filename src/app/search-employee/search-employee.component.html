@@ -1,15 +1,15 @@
 <section class="manage-section">
     <section class="form-section">
-        <form style="width:100%" id="search-form">
+        <form style="width:100%" id="search-form" (ngSubmit)="searchEmployees()">
             <div class="form-field">
                 <div class="dropdown-container-search">
                     <label class="dropdown-label">Name</label>
-                    <input class="dropdown-button input-css" placeholder="Enter Name" id="employee-name">
+                    <input class="dropdown-button input-css" placeholder="Enter Name" [(ngModel)]="searchName" name="searchName">
                 </div>
 
                 <div class="dropdown-container-search">
                     <label class="dropdown-label">Email Address</label>
-                    <input class="dropdown-button input-css" placeholder="Enter Email Id" id="employee-email">
+                    <input class="dropdown-button input-css" placeholder="Enter Email Id" [(ngModel)]="searchEmail" name="searchEmail">
                 </div>
 
                 <div class="dropdown-container-search">
@@ -74,10 +74,10 @@
                 </div>
             </div>
 
-            <!-- <div class="form-button" style="width:100%">
-                <button class="clear-btn">Clear</button>
-                <button class="submit-btn">Submit</button>
-            </div> -->
+            <div style="margin-top:5px;">
+                <button type="button" (click)="clearSearch()">Clear</button>
+                <button type="submit">Search</button>
+            </div>
         </form>
 
     </section>
