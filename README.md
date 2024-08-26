@@ -4,7 +4,7 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 
 ## Development server
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+the application will load on <a hreff="https://arpithaagkwd.github.io/InfrrdEmployeeProject/" target="_blank">https://arpithaagkwd.github.io/InfrrdEmployeeProject/<a>
 
 
 <h3>About the Project</h3>
