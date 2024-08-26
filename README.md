@@ -23,4 +23,4 @@ This is an employee management application, as of now the side nav items have Ov
 
 <br>
 
-<strong>in this version v1, recently added employee records are not being stored, so original array with employee json will show up in search component, however new employees details will appear in Manage component when you add employee details</strong>
+<strong>in this version v1, recently added employee records are not being stored, so original array with employee json will show up in search component, however new employees details will appear in Manage component when you add employee details, they can also be edited and deleted by clicking on the respective ICONS !!</strong>
