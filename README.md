@@ -7,13 +7,19 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
 
 
-###<h3>About the Project</h3>###
+<h3>About the Project</h3>
 
 This is an employee management application, as of now the side nav items have Overview (functional), Messages (unfunctional), Search (functional), Manage (Functional),History (unfunctional), My Account (Functional).
 
-on clicking on Search you can serach from side nav - it will redirect to serach component where you can search for employee based on the name or email
+- on application load, Project will open with <i>Overview</i>
+  
+- on clicking on Search you can serach from side nav - it will redirect to <i>search component</i> where you can <b>search for employee based on the name or email</b>
 
-on clicking on Manage you can see all employee records, edit employee records, delete employee records, add employee records
+- on clicking on Manage <b>you can see all employee records, edit employee records, delete employee records, add employee records</b>
+
+- on clicking on my account it will <b>display data of the Main Employee (typically like logged in employee)</b>
+
+all the other side-nav-items as of now are not functional i.e MESSAGES, HISTORY, SIGN OUT, GET HELP.
 
 <br>
 
